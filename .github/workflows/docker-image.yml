@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Docker login
+      uses: docker/login-action@v2.0.0
+      with:
+         username: azitmentor
+         password: ${{ secrets.password }}
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        docker build . --file Dockerfile --tag azitmentor/aticrmapp
+        docker push azitmentor/aticrmapp
