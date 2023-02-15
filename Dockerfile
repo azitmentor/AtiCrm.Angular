@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json /app
 COPY package-lock.json /app
 RUN npm install
-RUN run install -g @angular/cli@15
+RUN install -g @angular/cli@15
 COPY . /app
 RUN ng build --configuration production
 FROM nginx:1.21-alpine
