@@ -17,7 +17,7 @@ jobs:
       uses: docker/login-action@v2.0.0
       with:
          username: azitmentor
-         password: ${{ secrets.password }}
+         password: ${{ secrets.dockerpw }}
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
