@@ -1,0 +1,11 @@
+<h2>Partner adatok módosítása</h2>
+
+<div *ngIf="item">
+    <label>Név</label><input [(ngModel)]="item.name" type="text" />
+    <label>Telefon</label><input [(ngModel)]="item.phone" type="text" />
+    <label>Város</label><input [(ngModel)]="item.city" type="text" />
+    <button (click)="savePartner()" class="btn btn-primary">Mentés</button>
+</div>
+<div *ngIf="!item">
+    Adatok betöltése folyamatban
+</div>

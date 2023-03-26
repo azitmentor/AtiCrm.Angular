@@ -1,4 +1,4 @@
-<p>partnerlist works!</p>
+<h2>Partner lista</h2>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of items">
-            <td>{{item.id}}</td>
+            <td><a routerLink="/partneredit/{{item.id}}">Szerkeszt</a></td>
             <td>{{item.name}}</td>
             <td>{{item.phone}}</td>
             <td>{{item.city}}</td>
@@ -18,4 +18,4 @@
     </tbody>
 </table>
 
-<button class="btn btn-primary" (click)="AddClick()">Új partner</button>
+<a class="btn btn-primary" routerLink="/partneredit/0">Új partner</a>
